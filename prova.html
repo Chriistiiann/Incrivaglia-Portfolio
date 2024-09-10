@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo di Contatto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px #ccc;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .error, .success {
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <h2>Contattaci</h2>
+
+    <?php
+    // Verifica se il modulo è stato inviato
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Recupera i dati dal modulo
+        $name = htmlspecialchars(trim($_POST['name']));
+        $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+        $message = htmlspecialchars(trim($_POST['message']));
+
+        // Verifica che i campi non siano vuoti
+        if (!empty($name) && !empty($email) && !empty($message)) {
+            // Verifica che l'email sia valida
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                // Destinatario dell'email
+                $to = "tuoindirizzo@email.com"; // Sostituisci con il tuo indirizzo email
+                // Oggetto dell'email
+                $subject = "Nuovo messaggio da $name";
+                // Corpo del messaggio
+                $body = "Nome: $name\nEmail: $email\n\nMessaggio:\n$message";
+                // Header dell'email
+                $headers = "From: $email";
+
+                // Invia l'email
+                if (mail($to, $subject, $body, $headers)) {
+                    echo '<div class="success">Messaggio inviato con successo!</div>';
+                } else {
+                    echo '<div class="error">Errore nell\'invio del messaggio. Riprova più tardi.</div>';
+                }
+            } else {
+                echo '<div class="error">Indirizzo email non valido.</div>';
+            }
+        } else {
+            echo '<div class="error">Tutti i campi sono obbligatori.</div>';
+        }
+    }
+    ?>
+
+    <!-- Form HTML -->
+    <form action="contatto.php" method="POST">
+        <label for="name">Nome:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Messaggio:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>

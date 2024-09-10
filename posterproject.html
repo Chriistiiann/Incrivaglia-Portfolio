@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Visivo - Portfolio</title>
+        <link rel="stylesheet" href="stylesposter.css">
+        <link
+            href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <style></style>
+    </head>
+    <body>
+        <!-- Header della Pagina -->
+        <div class="menu">
+            <a href="#home" class="logo">Christian
+                <span>Incrivaglia</span></a>
+
+            <nav class="navbar">
+                <a href="index.html #home" class="active">Home</a>
+                <a href="index.html #about me">About me</a>
+                <a href="index.html #ciao">Skill</a>
+                <a href="index.html #project">Project</a>
+                <a href="index.html #contact">Contact</a>
+
+            </nav>
+        </div>
+        <header>
+
+            <h1>
+                <span class="glow">Visual</span>
+                <span>Design</span></h1>
+            <p>Explore my visual design projects, here you can find posters and visual
+                graphics.</p>
+        </header>
+
+        <!-- Sezione Portfolio -->
+        <section class="portfolio-grid">
+            <!-- Progetto 1 -->
+            <div class="project-item" onclick="openPopup('project1-popup')">
+                <img
+                    src="images/poster project/poster jordan 2.2.png"
+                    alt="Poster Creativo per Evento">
+                <h2>"The Flight of the Legend"</h2>
+                <p>An icon suspended in time: the intensity, grit and timeless greatness of
+                    Michael Jordan captured in a single image.</p>
+                <div class="used-software-preview">
+                    <img src="images/adobe-photoshop-logo-1.png" alt="Adobe Photoshop">
+                </div>
+            </div>
+
+            <!-- Progetto 2 -->
+            <div class="project-item" onclick="openPopup('project2-popup')">
+                <img
+                    src="images/poster project/poster bagnaia definitivo.png"
+                    alt="Layout per Esposizione">
+                <h2>"The Reigning Champion"</h2>
+                <p>A tribute to Bagnaia's extraordinary season, celebrating his dominance and
+                    victories.</p>
+                <div class="used-software-preview">
+                    <img src="images/adobe-photoshop-logo-1.png" alt="Adobe Photoshop">
+                </div>
+            </div>
+
+            <!-- Altri progetti possono essere aggiunti qui -->
+        </section>
+
+        <!-- Pop-up Dettagli del Progetto 1 -->
+        <div class="popup-overlay" id="project1-popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('project1-popup')">&times;</span>
+                <div class="titoli">
+                    <h2>Jordan
+                        <span>Poster</span></h2>
+                </div>
+                <div class="paragrafi">
+                    <p>The poster shows a tribute to legendary basketball player Michael Jordan. In
+                        the centre, an image of Jordan stands out as he is suspended in the air during
+                        an iconic dunk, wearing the classic red Chicago Bulls uniform with the number
+                        23.
+                        <br><br>
+                        His face is determined, with an expression that captures the intensity of the
+                        moment. In the background, there is a large black-and-white portrait of Jordan's
+                        face, which adds depth and invokes the idea of his status as an iconic figure in
+                        the world of sport.
+                        <br><br>
+                        At the top, Nike's famous ‘Jumpman’ logo, stylised in red, is visible, further
+                        emphasising the link with the athlete. Here it is offered in 3 different
+                        versions, in my opinion the best being the central one.</p>
+                </div>
+
+                <!-- Contenitore delle immagini con scroll -->
+                <div class="image-gallery">
+                    <img
+                        src="images/poster project/Poster jordan 2 Mockup prova.png"
+                        alt="Full Poster">
+                    <!-- Aggiungi più immagini se necessario -->
+                </div>
+
+                <!-- Icone dei programmi utilizzati -->
+                <div class="used-software">
+                    <img src="images/adobe-photoshop-logo-1.png" alt="Adobe Photoshop">
+
+                    <!-- Aggiungi altre icone se necessario -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Pop-up Dettagli del Progetto 2 -->
+        <div class="popup-overlay" id="project2-popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup('project2-popup')">&times;</span>
+                <div class="titoli">
+                    <h2>Bagnaia
+                        <span>Poster</span></h2>
+                </div>
+                <div class="paragrafi">
+                    <p>This poster celebrates the success of Francesco ‘Pecco’ Bagnaia, rider of the
+                        Ducati Lenovo team in MotoGP, and was created to capture the highlights of his
+                        winning season. The design features a powerful contrast of deep reds and whites
+                        that recall Ducati's iconic colours, creating a sense of energy and dynamism.
+                        <br>
+                        <br>
+
+                        The poster features four main images of Bagnaia: one in which he bites the
+                        medal, the symbol of his victory, another showing him celebrating with his hand
+                        to his ear in jubilation, a third in action on his bike during a race and the
+                        fourth in the background of the first three, with his helmet on. The shattered
+                        effect surrounding the central images adds a touch of movement and intensity,
+                        emphasising the adrenaline and speed of MotoGP.
+                        <br><br>
+
+                        At the top left, the official MotoGP logo underlines the authenticity of the
+                        sporting context, while the name ‘Francesco Bagnaia’ and the number ‘1’
+                        strategically placed on the right side confirm his status as champion. The
+                        team's main sponsors, Ducati and Lenovo, are prominently displayed, contributing
+                        to the team's identity and brand celebration.
+                        <br>
+
+                        This poster is a visual tribute to Bagnaia's talent and dedication, capturing
+                        the essence of competition and victory in MotoGP.
+                        <br></p>
+                </div>
+
+                <!-- Contenitore delle immagini con scroll -->
+                <div class="image-gallery bagnaia">
+                    <img
+                        src="images/poster project/poster bagnaia definitivo.png"
+                        alt="Full Layout">
+                    <!-- Aggiungi più immagini se necessario -->
+                </div>
+
+                <!-- Icone dei programmi utilizzati -->
+                <div class="used-software">
+                    <img src="images/adobe-photoshop-logo-1.png" alt="Adobe Photoshop">
+                    <!-- Aggiungi altre icone se necessario -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer della Pagina -->
+        <footer>
+
+            <div class="social">
+                <a
+                    href="https://www.linkedin.com/in/christian-incrivaglia-b47040313/"
+                    target="_blank">
+                    <i class="bx bxl-linkedin-square"></i>
+                </a>
+                <a href="https://www.instagram.com/christian.incrivaglia/" target="_blank">
+                    <i class="bx bxl-instagram-alt"></i>
+                </a>
+                <a href="https://www.behance.net/christiincriva" target="_blank">
+                    <i class='bx bxl-behance'></i>
+                </a>
+
+            </footer>
+
+            <div class="fondo">
+                <ul class="list">
+
+                    <li>
+                        <a href="index.html #about me">About Me</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html #project">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html #skilll">My Skills</a>
+                    </li>
+                </ul>
+
+                <p class="copyright">
+                    © Christian Incrivaglia | All Rights Reserved
+                </p>
+            </div>
+
+            <script>
+                function openPopup(id) {
+                    document
+                        .getElementById(id)
+                        .style
+                        .display = 'flex';
+                }
+
+                function closePopup(id) {
+                    document
+                        .getElementById(id)
+                        .style
+                        .display = 'none';
+                }
+            </script>
+        </body>
+    </html>
